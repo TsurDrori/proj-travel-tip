@@ -1,0 +1,14 @@
+* {
+   box-sizing: border-box;
+}
+
+/* FONTS */
+
+@font-face {
+   font-family: Pacifico Regular;
+   src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+h1 {
+   font-family: Pacifico Regular;
+}
