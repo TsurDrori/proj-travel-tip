@@ -66,12 +66,31 @@ header button {
     grid-template-rows: repeat(6, 1fr );
     /* grid-template-rows: repeat(7, 10px ); */
     grid-template-areas:
-    "header header header"
-    "hero    hero    hero"
-    "hero    hero    hero"
-    ".        main     ."
-    "footer footer footer"
+    "location location location location copy-location copy-location"
+    "location location location location copy-location copy-location"
+    "weather weather map map map map"
+    "weather weather map map map map"
+    "loaction-table loaction-table map map map map"
+    "loactions-table loaction-table map map map map"
     
+}
+.location-article-container{
+    grid-area: copy-location;
+}
+
+.copy-location-container{
+    grid-area: location;
+}
+
+.weather {
+    grid-area: weather;
+}
+.map-container{
+    grid-area: map;
+}
+
+.locations-table-container {
+    grid-area:loactions-table;
 }
 
 .item1 {
