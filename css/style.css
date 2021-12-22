@@ -1,10 +1,15 @@
 /* Cool CSS Debugging Technique */
 .debug * {
-    outline:1px solid gold
+    outline: 1px solid gold
 }
 
 * {
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Pacifico Regular;
+    src: url('../fonts/Pacifico-Regular.ttf');
 }
 
 body {
@@ -13,6 +18,7 @@ body {
 }
 
 h1 {
+    font-family: Pacifico Regular;
     margin: 0;
     font-size: 3rem;
 }
@@ -27,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: rgb(204, 197, 162);
-    
+
 }
 
 header input {
@@ -40,6 +46,7 @@ header input {
     background-color: rgb(235, 233, 221);
     /* margin-inline-end: 1rem; */
 }
+
 header input:focus {
     background-color: antiquewhite;
     padding: 0.5em 1em;
@@ -52,31 +59,32 @@ header button {
     padding: 0.5em;
     font-size: 1.2em;
     background-color: rgb(221, 217, 195);
-    
+
 }
 
-.my-location-btn{
+.my-location-btn {
     margin-inline-start: 2rem;
 }
 
 .main-container {
     display: grid;
     min-height: 85vh;
-    grid-template-columns: repeat(6, 1fr );
-    grid-template-rows: repeat(6, 1fr );
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     /* grid-template-rows: repeat(7, 10px ); */
     grid-template-areas:
-    "header header header"
-    "hero    hero    hero"
-    "hero    hero    hero"
-    ".        main     ."
-    "footer footer footer"
-    
+        "header header header header header header"
+        "                                         "
+        "weather weather map map map"
+        ".        main     ."
+        "footer footer footer"
+
 }
 
 .item1 {
-grid-area: header;
+    grid-area: header;
 }
+
 .video-preview {
     padding: 5px;
     margin: 8px;
@@ -86,7 +94,7 @@ grid-area: header;
     border-radius: 2px;
 }
 
-.video-preview > img {
+.video-preview>img {
     margin: 5px;
 }
 
@@ -95,11 +103,12 @@ grid-area: header;
     min-width: 300px;
     min-height: 250px;
 }
+
 .video-play iframe {
-    position: relative; 
-    height: auto; 
-    width: 100%;    
-    height: 100%;    
+    position: relative;
+    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .wiki-preview {
@@ -116,4 +125,3 @@ grid-area: header;
         flex-wrap: nowrap;
     }
 }
-
