@@ -20,7 +20,7 @@ body {
 h1 {
     font-family: Pacifico Regular;
     margin: 0;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 button:hover {
@@ -44,11 +44,11 @@ header input {
     border: none;
     transition: 0.5s;
     background-color: rgb(235, 233, 221);
-    /* margin-inline-end: 1rem; */
+    border-radius: 15px;
 }
 
 header input:focus {
-    background-color: antiquewhite;
+    background-color: rgb(199, 194, 169);
     padding: 0.5em 1em;
 }
 
@@ -59,6 +59,7 @@ header button {
     padding: 0.5em;
     font-size: 1.2em;
     background-color: rgb(221, 217, 195);
+    border-radius: 15px;
 
 }
 
@@ -67,40 +68,69 @@ header button {
 }
 
 .main-container {
+    padding: 40px;
     display: grid;
     min-height: 85vh;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    /* grid-template-rows: repeat(7, 10px ); */
     grid-template-areas:
-    "location location location location copy-location copy-location"
-    "weather weather map map map map"
-    "weather weather map map map map"
-    "locations-table locations-table map map map map"
-
+    "location       location        location location copy-location copy-location"
+    "weather        weather         map         map         map        map"
+    "weather        weather         map         map         map        map"
+    "locations-table locations-table map        map         map         map";
+    
     
 }
 .location-article-container{
     grid-area: location;
+    font-size: 1.6em;
+    width: 60vw;
+    height: 90px;
+    display: flex;
+    margin: auto 0;
+}
+.location-article{
+    margin: auto 0;
 }
 
 .copy-location-container{
     grid-area: copy-location;
+    border: none;
+    
+    width: 35vw;
+    height: 90px;
+    padding: 0.5em;
+    font-size: 1.2em;
+    margin: auto 0;
+}
+
+.copy-location-container button{
+    margin: auto;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+    font-size: 1.2em;
+    border-radius: 15px;
+    background-color: rgb(221, 217, 195);
 }
 
 .weather {
     grid-area: weather;
+    outline: solid 4px rgb(248, 245, 245);
+    
 }
 .map-container{
+    outline: solid 4px rgb(248, 245, 245);
     grid-area: map;
+    border-radius: 15px;
+    margin-left: 2rem;
 }
 
 .locations-table-container {
     grid-area:locations-table;
-}
-
-.item1 {
-    grid-area: header;
+    outline: solid 4px rgb(248, 245, 245);
+    margin-top: 2rem;
 }
 
 .video-preview {
