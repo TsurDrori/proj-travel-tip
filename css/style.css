@@ -22,6 +22,7 @@ button:hover {
 }
 
 header {
+    height: 15vh;
     padding: 40px;
     display: flex;
     justify-content: space-between;
@@ -58,11 +59,24 @@ header button {
     margin-inline-start: 2rem;
 }
 
-.main-content {
-    display: flex;
-    flex-wrap: wrap-reverse; 
+.main-container {
+    display: grid;
+    min-height: 85vh;
+    grid-template-columns: repeat(6, 1fr );
+    grid-template-rows: repeat(6, 1fr );
+    /* grid-template-rows: repeat(7, 10px ); */
+    grid-template-areas:
+    "header header header"
+    "hero    hero    hero"
+    "hero    hero    hero"
+    ".        main     ."
+    "footer footer footer"
+    
 }
 
+.item1 {
+grid-area: header;
+}
 .video-preview {
     padding: 5px;
     margin: 8px;
