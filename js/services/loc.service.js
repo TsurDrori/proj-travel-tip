@@ -3,7 +3,7 @@ export const locService = {
 }
 
 const STORAGE_KEY = 'locsDB'
-const locs = storageService.load(KEY) || {};
+// const locs = storageService.load(KEY) || {};
 
 // const locs = [
 //     { name: 'Greatplace', lat: 32.047104, lng: 34.832384 }, 
@@ -18,19 +18,19 @@ return new Promise((resolve, reject) => {
     });
 }
 
-function _createLocation() {
+function _createLocation(name) {
     const { lat, lng } = pos
     const loc = {
-        id: ,
+        id:12,
         name,
         lat,
         lng,
         createdAt: Date.now(),
-        weather:,
-        updatedAt:
+        weather: weather,
+        updatedAt: 0 
     }
     locs.push(loc)
-    storageService.saveToStorage(STORAGE_KEY, locs)
+    // saveToStorage(STORAGE_KEY, locs)
 }
 
 
